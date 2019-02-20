@@ -1,0 +1,27 @@
+﻿@page
+@model Football.Pages.PlayersModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>Players</h1>
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var player in Model.Players)
+                {
+                        <tr>
+                            <td>@player.Id</td>
+                            <td>@player.Name</td>
+                            
+                        </tr>
+                    }
+            </tbody>
+        </table>
+
+        
+    </form>
