@@ -1,0 +1,41 @@
+﻿@page
+@model Football.Pages.TournamentTreeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TournamentTree</title>
+    <link href="jquery.bracket.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="tournamentTree"></div>
+<script src="jquery.min.js"></script>
+<script src="jquery.bracket.min.js"></script>
+<script>
+
+    var minData = {
+        teams :	[
+            ["a","b"],
+            ["c","d"],
+            ["e","f"],
+            ["g","h"]	
+        ],
+        results : [ 
+            [[1,2],[1,2],[1,2],[1,2]],
+            [[1,2],[1,2]],
+            [[1,2],[1,2]]
+        ]
+    }
+
+    $('.tournamentTree').bracket({
+        init: tournamentData
+    })
+
+</script>
+</body>
+</html>
