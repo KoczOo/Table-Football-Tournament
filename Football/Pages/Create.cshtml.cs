@@ -33,7 +33,7 @@ namespace Football.Pages
 
             _db.Players.Add(Player);
             await _db.SaveChangesAsync();
-            return RedirectToPage("/index");
+            return RedirectToPage("/players");
         }
 
     }

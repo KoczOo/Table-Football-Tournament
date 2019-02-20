@@ -6,22 +6,22 @@
 <form method="post">
     <table class="table">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var player in Model.Players)
-                {
-                        <tr>
-                            <td>@player.Id</td>
-                            <td>@player.Name</td>
-                            
-                        </tr>
-                    }
-            </tbody>
-        </table>
+        @foreach (var player in Model.Players)
+        {
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.Name</td>
 
-        
-    </form>
+            </tr>
+        }
+        </tbody>
+    </table>
+</form>
+
+<button><a asp-page="./index">Back to Main Page!</a></button>
