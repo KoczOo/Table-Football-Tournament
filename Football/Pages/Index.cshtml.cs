@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Football.Pages
 {
-    public class IndexModel : PageModel
+    public class Index1Model : PageModel
     {
         public void OnGet()
         {
