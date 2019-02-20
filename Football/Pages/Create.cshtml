@@ -1,5 +1,8 @@
 ﻿@page
 @model Football.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+
 
 <h2>Create</h2>
 
@@ -7,5 +10,5 @@
 <form method="post">
     <div asp-validation-summary="All"></div>
     <div>Name: <input asp-for="Player.Name" /></div>
-    <input type="submit"/>
+    <input type="submit" />
 </form>
