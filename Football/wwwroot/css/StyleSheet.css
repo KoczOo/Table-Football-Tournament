@@ -79,3 +79,49 @@ h1 {
     max-width: 200px;
 }
 
+.create-container {
+    position: relative;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 250px;
+    align-content: center;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+.create-container, h2 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#create-header {
+    margin-top: 3%;
+}
+
+
+.form-create , input {
+    margin-top: 3%;
+}
+
+.table-striped {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 80%;
+    margin-left: 10%;
+    border-collapse: collapse;
+    border-radius: 30px;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 20px #666; /* this draws the table border  */
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 30px;
+}
+
+#homepage-button {
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
