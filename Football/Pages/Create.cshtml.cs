@@ -12,13 +12,13 @@ namespace Football.Pages
     public class IndexModel : PageModel
     {
 
-        private readonly AppDbContext _db;
+        private readonly PlayersDBContext _db;
 
         [BindProperty]
-        public Player Player { get; set; }
+        public Players Players { get; set; }
 
 
-        public IndexModel(AppDbContext db)
+        public IndexModel(PlayersDBContext db)
         {
             _db = db;
 
@@ -31,7 +31,7 @@ namespace Football.Pages
                 return Page();
             }
 
-            _db.Players.Add(Player);
+            _db.Players.Add(Players);
             await _db.SaveChangesAsync();
             return RedirectToPage("/players");
         }

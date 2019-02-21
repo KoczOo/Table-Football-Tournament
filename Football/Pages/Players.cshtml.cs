@@ -11,14 +11,14 @@ namespace Football.Pages
 {
     public class PlayersModel : PageModel
     {
-        private readonly AppDbContext _db;
+        private readonly PlayersDBContext _db;
 
-        public PlayersModel(AppDbContext db)
+        public PlayersModel(PlayersDBContext db)
         {
             _db = db;
         }
 
-        public IList<Player> Players { get; private set; }
+        public IList<Players> Players { get; private set; }
 
         public async Task OnGetAsync()
         {
