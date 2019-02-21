@@ -36,7 +36,7 @@ namespace Football.Model
 
                 entity.Property(e => e.PlayerName)
                     .IsRequired()
-                    .HasMaxLength(40)
+                    .HasMaxLength(10)
                     .IsUnicode(false);
             });
         }
