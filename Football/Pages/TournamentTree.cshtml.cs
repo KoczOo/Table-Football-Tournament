@@ -11,19 +11,15 @@ namespace Football.Pages
 {
     public class TournamentTreeModel : PageModel
     {
-        private readonly AppDbContext _db;
 
-        public TournamentTreeModel(AppDbContext db)
+        private readonly Teams timy;
+
+        public TournamentTreeModel()
         {
-            _db = db;
+            timy = new Teams();
+            Teams = timy.RandomizedTeams;
         }
 
-        [BindProperty]
-        public DbSet<Player> Players { get; set; }
-
-        public async Task<IActionResult> OnGetAsync()
-        {
-            return Page();
-        }
+        public List<string> Teams { get; private set; }
     }
 }
