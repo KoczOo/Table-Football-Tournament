@@ -3,12 +3,26 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, AuthoringTagHelpers
 
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="@Url.Content("css/StyleSheet.css")" rel="stylesheet" type="text/css" />
+    <title>Table Football Tournament</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
 
-<h2>Create</h2>
+<div class="create-container">
+    <h2 id="create-header">Zapis do turnieju</h2>
+    <div class="form-create">
+        <form method="post">
+            <div asp-validation-summary="All"></div>
+            <div>Podaj imię: <input asp-for="Player.Name"/></div>
+            <input type="submit"/>
+        </form>
+    </div>
+</div>
 
-<p>Enter your name:</p>
-<form method="post">
-    <div asp-validation-summary="All"></div>
-    <div>Name: <input asp-for="Players.PlayerName" /></div>
-    <input type="submit" />
-</form>
+<div class="footer">
+    <img id="logo" src="img/sponsors-codecool.png" />
+</div>

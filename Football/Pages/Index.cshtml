@@ -3,7 +3,37 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, AuthoringTagHelpers
 
+@{
+    Layout = null;
+}
 
-<h1>elo elo</h1>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="@Url.Content("css/StyleSheet.css")" rel="stylesheet" type="text/css" />
+    <title>Table Football Tournament</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<h1>Table Football Tournament</h1>
+<div id="container">
+    <div id="block"></div>
+    <div id="text">
+        <p>Zapisy na turniej piłkarzyków!</p>
+        <h3>Ogólne zasady turnieju:</h3>
+        <ul>
+            <li>Zapisy trwają do 22.02.2019 do godziny 16:00.</li>
+            <li>Po zamknięciu zapisów, zostną rozlosowane pary turniejowe, wraz z drzewkiem turniejowym.</li>
+            <li>Turniej rozgrywany jest w systemie play-offów.</li>
+            <li>Wygrywa drużyna, która pierwsza zdobędzie 10 bramek.</li>
+            <li>Po streleniu 5 bramek, drużyny zamieniają się stronami.</li>
+        </ul>
+        <a href="/create" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="register-button">Zapisz się!</a>
+    </div>
+</div>
 
-<button> <a asp-page="./create"> Create!</a></button>
+<div class="footer">
+    <img id="logo" src="img/sponsors-codecool.png"/>
+</div>
+
+
