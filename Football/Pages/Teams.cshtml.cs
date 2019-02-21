@@ -12,18 +12,15 @@ namespace Football.Pages
 {
     public class TeamsModel : PageModel
     {
-        private readonly TeamsDbContext _db;
+        private readonly Teams timy;
 
-        public TeamsModel(TeamsDbContext db)
+        public TeamsModel()
         {
-            _db = db;
+            timy = new Teams();
+            Teams = timy.RandomizedTeams;
         }
 
-        public Teams Teams { get; private set; }
+        public List<string> Teams { get; private set; }
 
-        public async Task OnGetAsync()
-        {
-            Teams = await _db.Teams.MinAsync();
-        }
     }
 }
