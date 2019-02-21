@@ -6,6 +6,7 @@ using Football.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace Football.Pages
 {
@@ -17,10 +18,10 @@ namespace Football.Pages
         public TournamentTreeModel()
         {
             timy = new Teams();
-            Teams = timy.RandomizedTeams;
+            Teams = JsonConvert.SerializeObject(timy.RandomizedTeams);
         }
 
-        public List<string> Teams { get; private set; }
-        public Array Teams1 { get; set; }
+        public string Teams { get; private set; }
+
     }
 }
