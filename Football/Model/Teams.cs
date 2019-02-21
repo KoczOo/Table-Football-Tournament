@@ -47,11 +47,13 @@ namespace Football.Model
 
         private List<string> createTeams()
         {
-            for (int i = 0; i < playersList.Count; i ++)
+            List<string> RandomizedTeams = new List<string>();
+            for (int i = 0; i < playersList.Count - 1; i = i + 2)
             {
-
+                RandomizedTeams.Add(createTeamName(playersList[i], playersList[i + 1])); 
             }
-            
+
+            return RandomizedTeams;
         }
     }
 }
