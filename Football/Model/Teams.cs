@@ -17,6 +17,7 @@ namespace Football.Model
         public Teams()
         {
             GetPlayers();
+            Shuffle();
             CreateTeams();
         }
 
@@ -45,9 +46,13 @@ namespace Football.Model
         public void CreateTeams()
         {
             RandomizedTeams = new List<string>();
+            if (playersList.Count % 2 == 1)
+            {
+                playersList.Add("DefaultPlayer");
+            }
             for (int i = 0; i < playersList.Count - 1; i = i + 2)
             {
-                RandomizedTeams.Add(playersList[i] + " " + playersList[i + 1]); 
+                RandomizedTeams.Add(playersList[i] + " " + playersList[i + 1]);
             }
         }
     }
