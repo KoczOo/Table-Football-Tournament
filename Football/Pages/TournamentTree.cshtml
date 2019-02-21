@@ -2,7 +2,6 @@
 @model Football.Pages.TournamentTreeModel
 
 @{
-   var kurwa = @Model.Teams;
 }
 
 <!DOCTYPE html>
@@ -12,6 +11,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>TournamentTree</title>
     <link href="jquery.bracket.min.css" rel="stylesheet" />
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
 </head>
 <body>
 <div class="tournamentTree"></div>
@@ -19,7 +19,7 @@
 <script src="jquery.bracket.min.js"></script>
 <script>
 
-    var teamsList = @kurwa;
+    var teamsList = @Html.Raw(Model.Teams);
 
     var teamPairsList = [];
 
@@ -34,15 +34,18 @@
         return a;
     }
 
+    console.log(teamsList)
+
     function createPairs() {
         shuffle(teamsList);
-        Console.Log(teamsList);
-        for (var i = 0; i < teamsList.Length - 1; i = i + 2)
-        {
-            teamPairsList += [teamsList[i], teamsList[i + 1]];
+        console.log(teamsList);
+        for (var i = 0; i < teamsList.length - 1; i = i + 2) {
+            console.log(teamsList)
+            console.log(teamsList)
+            teamPairsList.push([teamsList[i], teamsList[i + 1]]);
             
         }
-        Console.Log(teamPairsList);
+        console.log(teamPairsList);
     }
 
     createPairs();
