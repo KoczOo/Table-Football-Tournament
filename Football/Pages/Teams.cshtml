@@ -1,0 +1,28 @@
+﻿@page
+@model Football.Pages.TeamsModel
+@{
+    Layout = null;
+}
+
+<h1>Players</h1>
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var team in Model.Teams[0].RandomizedTeams)
+            {
+                <tr>
+                    <td>@team</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+
+<button><a asp-page="./index">Back to Main Page!</a></button>

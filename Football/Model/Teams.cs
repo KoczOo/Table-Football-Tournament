@@ -10,12 +10,14 @@ namespace Football.Model
 {
     public class Teams
     {
+        public List<string> RandomizedTeams { get; set; }
         private List<string> playersList;
         private Random rng = new Random();
 
         public Teams()
         {
             GetPlayers();
+            CreateTeams();
         }
 
         public void Shuffle()
@@ -45,15 +47,12 @@ namespace Football.Model
             return player1 + "/" + player2;
         }
 
-        private List<string> createTeams()
+        public void CreateTeams()
         {
-            List<string> RandomizedTeams = new List<string>();
             for (int i = 0; i < playersList.Count - 1; i = i + 2)
             {
                 RandomizedTeams.Add(createTeamName(playersList[i], playersList[i + 1])); 
             }
-
-            return RandomizedTeams;
         }
     }
 }

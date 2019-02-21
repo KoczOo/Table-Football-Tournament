@@ -19,6 +19,7 @@ namespace Football
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PlayersDBContext>();
+            services.AddDbContext<TeamsDbContext>(options => options.UseInMemoryDatabase("name"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1); ;
         }
 
