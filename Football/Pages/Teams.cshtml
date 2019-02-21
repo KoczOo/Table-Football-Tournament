@@ -14,13 +14,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var team in Model.Teams[0].RandomizedTeams)
-            {
                 <tr>
-                    <td>@team</td>
-
+                    <td>@Model.Teams.RandomizedTeams</td>
                 </tr>
-            }
         </tbody>
     </table>
 </form>

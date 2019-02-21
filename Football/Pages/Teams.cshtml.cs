@@ -19,11 +19,11 @@ namespace Football.Pages
             _db = db;
         }
 
-        public IList<Teams> Teams { get; private set; }
+        public Teams Teams { get; private set; }
 
         public async Task OnGetAsync()
         {
-            Teams = await _db.Teams.AsNoTracking().ToListAsync();
+            Teams = await _db.Teams.MinAsync();
         }
     }
 }
