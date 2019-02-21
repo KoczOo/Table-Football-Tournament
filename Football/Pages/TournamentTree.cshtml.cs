@@ -21,5 +21,6 @@ namespace Football.Pages
         }
 
         public List<string> Teams { get; private set; }
+        public Array Teams1 { get; set; }
     }
 }

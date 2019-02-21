@@ -2,7 +2,7 @@
 @model Football.Pages.TournamentTreeModel
 
 @{
-    Layout = null;
+   var kurwa = @Model.Teams;
 }
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <script src="jquery.bracket.min.js"></script>
 <script>
 
-    var teamsList = @Model.Teams;
+    var teamsList = @kurwa;
 
     var teamPairsList = [];
 
@@ -36,11 +36,16 @@
 
     function createPairs() {
         shuffle(teamsList);
+        Console.Log(teamsList);
         for (var i = 0; i < teamsList.Length - 1; i = i + 2)
         {
-            teamPairsList += [teamsList[i], teamsList[i+1]]; 
+            teamPairsList += [teamsList[i], teamsList[i + 1]];
+            
         }
+        Console.Log(teamPairsList);
     }
+
+    createPairs();
 
     var tournamentData = {
 
@@ -50,7 +55,7 @@
 
     $('.tournamentTree').bracket({
         init: tournamentData
-    })
+    });
 
 </script>
 </body>
