@@ -41,7 +41,15 @@
         for (var i = 0; i < teamsList.length - 1; i = i + 2) {
             teamPairsList.push([teamsList[i], teamsList[i + 1]]);
         }
+        var a = 1;
+        if (!power_of_2(teamPairsList.length)){
+            while(!power_of_2(teamPairsList.length)) {
+                teamPairsList.push(["LooserTeam" + a, "LooserTeam" + (a + 1)]);
+                a += 2;
+            }
+        }
     }
+
 
     createPairs();
 
