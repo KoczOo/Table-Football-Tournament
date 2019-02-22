@@ -1,7 +1,10 @@
 div.jQBracket {
     font-family: Arial;
     font-size: 14px;
-    position: relative
+    position: relative;
+    margin-top: 5%;
+    margin-left:5%
+            
 }
 
     div.jQBracket .tools {

@@ -7,11 +7,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>TournamentTree</title>
+    <link href="@Url.Content("css/StyleSheet.css")" rel="stylesheet" type="text/css" />
     <link href="jquery.bracket.min.css" rel="stylesheet" />
     <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
 </head>
 <body>
+<h1 id="create-header">Tournament Bracket</h1>
 <div class="tournamentTree"></div>
+<div class="footer">
+    <img id="logo" src="img/sponsors-codecool.png" />
+</div>
 <script src="jquery.min.js"></script>
 <script src="jquery.bracket.min.js"></script>
 <script>
@@ -41,13 +46,13 @@
     createPairs();
 
     var tournamentData = {
-        teams : teamPairsList,
-        results : []
+        teams: teamPairsList,
+        results: []
     }
 
     function power_of_2(n) {
-        if (typeof n !== 'number') 
-            return 'Not a number'; 
+        if (typeof n !== 'number')
+            return 'Not a number';
 
         return n && (n & (n - 1)) === 0;
     }
@@ -59,7 +64,7 @@
             disableTeamEdit: true,
             disableToolbar: true,
             teamWidth: 200
-    });
+        });
     })
 
 </script>
