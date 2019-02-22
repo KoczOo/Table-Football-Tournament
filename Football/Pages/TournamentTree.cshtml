@@ -34,18 +34,11 @@
         return a;
     }
 
-    console.log(teamsList)
-
     function createPairs() {
         shuffle(teamsList);
-        console.log(teamsList);
         for (var i = 0; i < teamsList.length - 1; i = i + 2) {
-            console.log(teamsList)
-            console.log(teamsList)
             teamPairsList.push([teamsList[i], teamsList[i + 1]]);
-            
         }
-        console.log(teamPairsList);
     }
 
     createPairs();
@@ -53,12 +46,20 @@
     var tournamentData = {
 
         teams : teamPairsList,
-        results : [[1,2]]
+        results : []
     }
 
     $('.tournamentTree').bracket({
-        init: tournamentData
+        init: tournamentData,
+        teamWidth: 200
     });
+
+    function power_of_2(n) {
+        if (typeof n !== 'number') 
+            return 'Not a number'; 
+
+        return n && (n & (n - 1)) === 0;
+    }
 
 </script>
 </body>

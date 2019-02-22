@@ -52,7 +52,7 @@ namespace Football.Model
             }
             for (int i = 0; i < playersList.Count - 1; i = i + 2)
             {
-                RandomizedTeams.Add(playersList[i] + " " + playersList[i + 1]);
+                RandomizedTeams.Add(playersList[i] + " & " + playersList[i + 1]);
             }
         }
     }
