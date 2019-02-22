@@ -1,9 +1,6 @@
 ﻿@page
 @model Football.Pages.TournamentTreeModel
 
-@{
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -44,15 +41,9 @@
     createPairs();
 
     var tournamentData = {
-
         teams : teamPairsList,
         results : []
     }
-
-    $('.tournamentTree').bracket({
-        init: tournamentData,
-        teamWidth: 200
-    });
 
     function power_of_2(n) {
         if (typeof n !== 'number') 
@@ -60,6 +51,16 @@
 
         return n && (n & (n - 1)) === 0;
     }
+
+    $(function() {
+        $('.tournamentTree').bracket({
+            init: tournamentData,
+            save: function() {},
+            disableTeamEdit: true,
+            disableToolbar: true,
+            teamWidth: 200
+    });
+    })
 
 </script>
 </body>
